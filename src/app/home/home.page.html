@@ -1,4 +1,4 @@
-<ion-menu side="start" menuId="first" contentId="main">
+<ion-menu side="start" menuId="sideMenu" contentId="main">
   <ion-header>
     <ion-toolbar class="menuHeading">
       <ion-title>Simple News</ion-title>
@@ -6,9 +6,9 @@
   </ion-header>
   <ion-content>
     <ion-list>
-      <ion-item (click)="aboutPage()">About Us</ion-item>
-      <ion-item (click)="contactPage()">Contact Us</ion-item>
-      <ion-item (click)="settingsPage()">Settings</ion-item>
+      <ion-item class="ion-activatable ion-ripple-effect" (click)="aboutPage()">About Us</ion-item>
+      <ion-item class="ion-activatable ion-ripple-effect" (click)="contactPage()">Contact Us</ion-item>
+      <ion-item class="ion-activatable ion-ripple-effect" (click)="settingsPage()">Settings</ion-item>
     </ion-list>
   </ion-content>
 </ion-menu>

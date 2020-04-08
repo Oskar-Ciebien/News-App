@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuController } from '@ionic/angular';
-
-import { NavController } from 'ionic-angular';
-import { ContactPage } from '../contact/contact.page';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -11,26 +9,23 @@ import { ContactPage } from '../contact/contact.page';
 })
 export class HomePage {
 
-  contact: ContactPage;
-
   constructor(private menu: MenuController, private nav: NavController) { }
 
-  openFirst() {
-    this.menu.enable(true, 'first');
-    this.menu.open('first');
+  openMenu() {
+    this.menu.enable(true, 'sideMenu');
+    this.menu.open('sideMenu');
   }
 
-  openEnd() {
-    this.menu.open('end');
-  }
-
-  openCustom() {
-    this.menu.enable(true, 'custom');
-    this.menu.open('custom');
+  aboutPage() {
+    this.nav.navigateRoot('/about');
   }
 
   contactPage() {
-    this.nav.setRoot(this.contact);
+    this.nav.navigateRoot('/contact');
+  }
+
+  settingsPage() {
+    this.nav.navigateRoot('/settings');
   }
 
 }
