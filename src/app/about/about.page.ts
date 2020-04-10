@@ -31,4 +31,8 @@ export class AboutPage implements OnInit {
     this.nav.navigateRoot('/settings');
   }
 
+  homePage() {
+    this.nav.navigateBack('/home');
+  }
+  
 }

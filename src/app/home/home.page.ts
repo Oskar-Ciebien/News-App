@@ -28,4 +28,7 @@ export class HomePage {
     this.nav.navigateRoot('/settings');
   }
 
+  homePage() {
+    this.nav.navigateBack('/home');
+  }
 }

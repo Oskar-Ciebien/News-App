@@ -6,11 +6,21 @@
   </ion-header>
   <ion-content>
     <ion-list>
+      <ion-item class="ion-activatable ion-ripple-effect" (click)="homePage()">Newsfeed</ion-item>
       <ion-item class="currentPage ion-activatable ion-ripple-effect" (click)="aboutPage()">About Us</ion-item>
       <ion-item class="ion-activatable ion-ripple-effect" (click)="contactPage()">Contact Us</ion-item>
       <ion-item class="ion-activatable ion-ripple-effect" (click)="settingsPage()">Settings</ion-item>
     </ion-list>
   </ion-content>
 </ion-menu>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button color="danger"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
 <ion-router-outlet id="main"></ion-router-outlet>

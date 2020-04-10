@@ -31,4 +31,8 @@ export class ContactPage implements OnInit {
     this.nav.navigateRoot('/settings');
   }
 
+  homePage() {
+    this.nav.navigateBack('/home');
+  }
+
 }
