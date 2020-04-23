@@ -1,10 +1,15 @@
+<!-- Side Menu -->
 <ion-menu side="start" menuId="sideMenu" contentId="main">
+  <!-- Header of the menu -->
   <ion-header>
     <ion-toolbar class="menuHeading">
+      <!-- Title -->
       <ion-title>Simple News</ion-title>
     </ion-toolbar>
   </ion-header>
+  <!-- Content of the menu -->
   <ion-content>
+    <!-- Available Pages to pick on the menu -->
     <ion-list>
       <ion-item class="ion-activatable ion-ripple-effect" (click)="homePage()">Newsfeed</ion-item>
       <ion-item class="currentPage ion-activatable ion-ripple-effect" (click)="aboutPage()">About Us</ion-item>
@@ -14,13 +19,33 @@
   </ion-content>
 </ion-menu>
 
+<!-- Menu back button with colour -->
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
+      <!-- Menu button -->
       <ion-menu-button></ion-menu-button>
+      <!-- Colour -->
       <ion-back-button color="danger"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
+<!--  -->
+<ion-content class="ion-text-center" padding="true">
+  <h2>My Objective</h2>
+  <br>
+  <ion-card class="objective">
+    <h4 class="ion-text-center">Is to keep you all up to date with the latest news in Ireland.</h4>
+  </ion-card>
+  <br><br>
+  <ion-list>
+    <ion-list>I believe that everyone deserves to be updated on everything especially in times like this, where most of us are staying at home. Many people are using their phones to read articles, this is the idea of this app.</ion-list>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <p class="footerText"><i>News articles delivered by NewsAPI.org</i></p>
+</ion-footer>
 
 <ion-router-outlet id="main"></ion-router-outlet>

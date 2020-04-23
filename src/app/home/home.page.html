@@ -22,15 +22,20 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-item *ngFor="let article of NewsArticles">
-      <h3>{{article.title}}</h3>
-      <p>{{article.content}}</p>
-      <img height="300px" width="400px" src="{{article.urlToImage}}">
-
-    </ion-item>
-  </ion-list>
+<ion-content overflow-scroll="false">
+  <ion-infinite-scroll>
+    <ion-infinite-scroll-content>
+      <ion-card *ngFor="let article of NewsArticles">
+        <img height="300px" width="400px" src="{{article.urlToImage}}">
+        <ion-card-header>
+          <ion-card-header><h2>{{article.title}}</h2></ion-card-header>
+        </ion-card-header>
+        <ion-card-content>
+          {{article.content}}
+        </ion-card-content>
+      </ion-card>
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>
 
 <ion-router-outlet id="main"></ion-router-outlet>
