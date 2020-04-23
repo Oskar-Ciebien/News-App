@@ -23,4 +23,27 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-content style="text-align: center;" fullscreen="true">
+  <ion-toolbar>
+    <ion-title>Contact Us</ion-title>
+  </ion-toolbar>
+  <br><br>
+  <ion-label>Please contact us using the form below. Make sure to fill all boxes.</ion-label>
+  <br><br>
+  <ion-item>
+    <ion-label position="fixed">Name</ion-label>
+    <ion-input type="text" (click)="openKeyboard()"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="fixed">E-Mail</ion-label>
+    <ion-input type="email" (click)="openKeyboard()"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Message</ion-label>
+    <ion-textarea clearOnEdit="true" type="text" (click)="openKeyboard()"></ion-textarea>
+  </ion-item>
+  <br>
+  <ion-button expand="block" size="default" strong="true">Submit</ion-button>
+</ion-content>
+
 <ion-router-outlet id="main"></ion-router-outlet>

@@ -23,4 +23,23 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-content style="text-align: center;">
+  <ion-toolbar>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+  <br><br>
+  <ion-label>Please tell us your name.</ion-label>
+  <br><br>
+  <ion-item>
+    <ion-label position="fixed">First Name</ion-label>
+    <ion-input type="text" (click)="openKeyboard()"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="fixed">Last Name</ion-label>
+    <ion-input type="text" (click)="openKeyboard()"></ion-input>
+  </ion-item>
+  <br>
+  <ion-button strong="true" class="ion-activatable ion-ripple-effect">Submit</ion-button>
+</ion-content>
+
 <ion-router-outlet id="main"></ion-router-outlet>
