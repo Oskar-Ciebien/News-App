@@ -1,12 +1,15 @@
+// Menu Heading - Top box
 .menuHeading {
   --color: #751616;
   --background: #bfbfbf;
 }
 
+// Menu width - Menu taken from ion docs
 .my-custom-menu {
   --width: 400px;
 }
 
+// Active/Current page colour on menu
 .currentPage {
   --color: orange;
 }

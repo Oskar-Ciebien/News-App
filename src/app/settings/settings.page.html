@@ -1,11 +1,16 @@
+<!-- Side Menu -->
 <ion-menu side="start" menuId="sideMenu" contentId="main">
+  <!-- Header of the menu -->
   <ion-header>
     <ion-toolbar class="menuHeading">
+      <!-- Title -->
       <ion-title>Simple News</ion-title>
     </ion-toolbar>
   </ion-header>
+  <!-- Content of the menu -->
   <ion-content>
-    <ion-list>
+    <!-- Available Pages to pick on the menu -->
+    <ion-list> 
       <ion-item class="ion-activatable ion-ripple-effect" (click)="homePage()">Newsfeed</ion-item>
       <ion-item class="ion-activatable ion-ripple-effect" (click)="aboutPage()">About Us</ion-item>
       <ion-item class="ion-activatable ion-ripple-effect" (click)="contactPage()">Contact Us</ion-item>
@@ -14,32 +19,50 @@
   </ion-content>
 </ion-menu>
 
+<!-- Menu back button with colour -->
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
+      <!-- Menu button -->
       <ion-menu-button></ion-menu-button>
+      <!-- Colour -->
       <ion-back-button color="danger"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
+<!-- Ion - Content for the page -->
 <ion-content style="text-align: center;">
+  <!-- Setting title at the top of the page - Toolbar -->
   <ion-toolbar>
     <ion-title>Settings</ion-title>
   </ion-toolbar>
+  <!-- Label where the name would pop out once the user pressed on the button after writing down their name -->
+  <ion-label color="danger">{{fullName}}</ion-label>
   <br><br>
+  <!-- Label with the suggestion -->
   <ion-label>Please tell us your name.</ion-label>
   <br><br>
+  <!-- First Name of the User -->
   <ion-item>
-    <ion-label position="fixed">First Name</ion-label>
-    <ion-input type="text" (click)="openKeyboard()"></ion-input>
+    <!-- Label for the first name -->
+    <ion-label position="stacked">First Name</ion-label>
+    <!-- Input box for the first name -->
+    <ion-input type="text" maxLength="15" [(ngModel)]="firstName" (click)="openKeyboard()"></ion-input>
   </ion-item>
+  <!-- Last Name of the User -->
   <ion-item>
-    <ion-label position="fixed">Last Name</ion-label>
-    <ion-input type="text" (click)="openKeyboard()"></ion-input>
+    <!-- Label for the last name -->
+    <ion-label position="stacked">Last Name</ion-label>
+    <!-- Input box for the last name -->
+    <ion-input type="text" maxLength="15" [(ngModel)]="lastName" (click)="openKeyboard()"></ion-input>
   </ion-item>
   <br>
-  <ion-button strong="true" class="ion-activatable ion-ripple-effect">Submit</ion-button>
+  <!-- Submit button with effect and call to saveName() -->
+  <!-- I couldn't get the display and save of the name unfortunately -->
+
+  <ion-button strong="true" class="ion-activatable ion-ripple-effect" (click)="saveName()">Submit</ion-button>
+  <button ion-button large full color="dark" (click)="saveName()">Submit</button>
 </ion-content>
 
 <ion-router-outlet id="main"></ion-router-outlet>

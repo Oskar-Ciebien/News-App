@@ -6,7 +6,7 @@ import { MenuController } from '@ionic/angular';
 // NavigationController Import
 import { NavController } from '@ionic/angular';
 
-// 
+// NewsService Import
 import { NewsService } from '../Services/news.service';
 
 @Component({
@@ -16,11 +16,14 @@ import { NewsService } from '../Services/news.service';
 })
 export class HomePage implements OnInit {
 
+  // Variables
   NewsArticles:any=[];
 
+  // Constructor
   constructor(private menu: MenuController, private nav: NavController, private newsService: NewsService) { }
 
   ngOnInit() {
+    // Gets the news from service asynchronously
     this.newsService.GetLatestNews().subscribe(
       (data)=>{
         this.NewsArticles = data.articles;
@@ -53,7 +56,5 @@ export class HomePage implements OnInit {
   homePage() {
     this.nav.navigateBack('/home');
   }
-
-
 
 }

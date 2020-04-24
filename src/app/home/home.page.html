@@ -1,11 +1,16 @@
+<!-- Side Menu -->
 <ion-menu side="start" menuId="sideMenu" contentId="main">
+  <!-- Header of the menu -->
   <ion-header>
     <ion-toolbar class="menuHeading">
+      <!-- Title -->
       <ion-title>Simple News</ion-title>
     </ion-toolbar>
   </ion-header>
+  <!-- Content of the menu -->
   <ion-content>
-    <ion-list>
+    <!-- Available Pages to pick on the menu -->
+    <ion-list> 
       <ion-item class="currentPage ion-activatable ion-ripple-effect" (click)="homePage()">Newsfeed</ion-item>
       <ion-item class="ion-activatable ion-ripple-effect" (click)="aboutPage()">About Us</ion-item>
       <ion-item class="ion-activatable ion-ripple-effect" (click)="contactPage()">Contact Us</ion-item>
@@ -14,23 +19,34 @@
   </ion-content>
 </ion-menu>
 
+<!-- Menu back button with colour -->
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
+      <!-- Menu button -->
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
+<!-- Ion Content for home page -->
+<!-- Scrolling doesn't work on home page. I tried using
+     many solutions that I found on google such as 
+     overflow-scroll and ion-infitnite-scroll
+     but it doesn't work -->
 <ion-content overflow-scroll="false">
   <ion-infinite-scroll>
     <ion-infinite-scroll-content>
+      <!-- Card with all the articles from NewsArticles -->
       <ion-card *ngFor="let article of NewsArticles">
+        <!-- Image with set size and height for the article images -->
         <img height="300px" width="400px" src="{{article.urlToImage}}">
         <ion-card-header>
+          <!-- Card header with article titles -->
           <ion-card-header><h2>{{article.title}}</h2></ion-card-header>
         </ion-card-header>
         <ion-card-content>
+          <!-- Card content with the article description/content -->
           {{article.content}}
         </ion-card-content>
       </ion-card>

@@ -1,11 +1,16 @@
+<!-- Side Menu -->
 <ion-menu side="start" menuId="sideMenu" contentId="main">
+  <!-- Header of the menu -->
   <ion-header>
     <ion-toolbar class="menuHeading">
+      <!-- Title -->
       <ion-title>Simple News</ion-title>
     </ion-toolbar>
   </ion-header>
+  <!-- Content of the menu -->
   <ion-content>
-    <ion-list>
+    <!-- Available Pages to pick on the menu -->
+    <ion-list> 
       <ion-item class="ion-activatable ion-ripple-effect" (click)="homePage()">Newsfeed</ion-item>
       <ion-item class="ion-activatable ion-ripple-effect" (click)="aboutPage()">About Us</ion-item>
       <ion-item class="currentPage ion-activatable ion-ripple-effect" (click)="contactPage()">Contact Us</ion-item>
@@ -14,36 +19,46 @@
   </ion-content>
 </ion-menu>
 
+<!-- Menu back button with colour -->
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
+      <!-- Menu button -->
       <ion-menu-button></ion-menu-button>
+      <!-- Colour -->
       <ion-back-button color="danger"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
+<!-- Ion - Content for the page -->
 <ion-content style="text-align: center;" fullscreen="true">
+  <!-- Contact page title - Toolbar -->
   <ion-toolbar>
     <ion-title>Contact Us</ion-title>
   </ion-toolbar>
   <br><br>
-  <ion-label>Please contact us using the form below. Make sure to fill all boxes.</ion-label>
+  <!-- Label to inform about the form -->
+  <ion-label>Please use the form below. Make sure to fill all the boxes.</ion-label>
   <br><br>
+  <!-- Full Name of the User -->
   <ion-item>
-    <ion-label position="fixed">Name</ion-label>
-    <ion-input type="text" (click)="openKeyboard()"></ion-input>
+    <!-- Input for the full name and clickable to openKeyboard() -->
+    <ion-input placeholder="Full Name" type="text" (click)="openKeyboard()"></ion-input>
   </ion-item>
+  <!-- Email of the User -->
   <ion-item>
-    <ion-label position="fixed">E-Mail</ion-label>
-    <ion-input type="email" (click)="openKeyboard()"></ion-input>
+    <!-- Input for the email and clickable to openKeyboard() -->
+    <ion-input placeholder="E-Mail" type="email" (click)="openKeyboard()"></ion-input>
   </ion-item>
+  <!-- Message from the User -->
   <ion-item>
-    <ion-label>Message</ion-label>
-    <ion-textarea clearOnEdit="true" type="text" (click)="openKeyboard()"></ion-textarea>
+    <!-- Message input from the user -->
+    <ion-input placeholder="Message" type="text" clearOnEdit="true" (click)="openKeyboard()"></ion-input>
   </ion-item>
   <br>
-  <ion-button expand="block" size="default" strong="true">Submit</ion-button>
+  <!-- Button to send - Only decorative, no functionality -->
+  <ion-button expand="block" size="default" strong="true">Send</ion-button>
 </ion-content>
 
 <ion-router-outlet id="main"></ion-router-outlet>

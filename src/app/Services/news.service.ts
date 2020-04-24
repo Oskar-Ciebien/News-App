@@ -12,6 +12,7 @@ import { Observable } from 'rxjs';
 })
 export class NewsService {
 
+  // Constructor
   constructor(private httpClient: HttpClient) { }
 
   // Method to get the latest news from newsapi.org - Ireland

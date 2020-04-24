@@ -1,24 +1,30 @@
+// Menu Heading - Top box
 .menuHeading {
   --color: #751616;
   --background: #bfbfbf;
 }
 
+// Menu width - Menu taken from ion docs
 .my-custom-menu {
   --width: 400px;
 }
 
+// Active/Current page colour on menu
 .currentPage {
   --color: orange;
 }
 
+// Footer Text
 .footerText {
   text-align: center;
 }
 
+// Objective text
 .objective {
   box-shadow: 0px 14px 25px lightskyblue;
 }
 
+// Ion Cards on about page
 ion-card {
   border-radius: 10px;
 }

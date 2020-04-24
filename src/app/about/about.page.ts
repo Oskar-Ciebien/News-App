@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
+// Menu Import
 import { MenuController } from '@ionic/angular';
+
+// Navigation Import
 import { NavController } from '@ionic/angular';
 
 @Component({
@@ -9,6 +13,7 @@ import { NavController } from '@ionic/angular';
 })
 export class AboutPage implements OnInit {
 
+  // Constructor
   constructor(private menu: MenuController, private nav: NavController) { }
 
   ngOnInit() {
